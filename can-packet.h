@@ -25,11 +25,10 @@
 #ifndef CAN_PACKET_H_
 #define CAN_PACKET_H_
 
-#include "stdint.h"
+#include <stdint.h>
 
 namespace CAN
 {
-
 struct PACKET final
 {
     uint16_t my_id;
