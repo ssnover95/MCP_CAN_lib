@@ -40,6 +40,8 @@ struct PACKET;
 class MCP2515 final
 {
 public:
+    struct STATUS_FIELD;
+
     enum class RETURN_CODE : uint8_t
     {
         FAILURE = 0u,
@@ -96,8 +98,7 @@ private:
 
     void writeRegister(MCP2515_HARDWARE_ADDRESS address, uint8_t data);
 
-    // TODO: Investigate turning status into an enum
-    uint8_t readStatus();
+    STATUS_FIELD readStatus();
 
 public:
     MCP2515() = delete;
