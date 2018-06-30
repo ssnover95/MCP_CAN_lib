@@ -1,1 +1,0 @@
-find . \( -name '*.cpp' -or -name '*.h' \) -print0 | xargs -0 clang-format-3.9 -i -style=file
